@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Favorite Spots</title>
+
+     <!-- Latest compiled and minified CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- CSS and JS Imported -->
+    <link rel="stylesheet" href="http://npmcdn.com/leaflet@1.2.0/dist/leaflet.css"/>
+    <script src="http://npmcdn.com/leaflet@1.2.0/dist/leaflet.js"></script>
+
+    <!-- Custome CSS -->
+    <link rel="stylesheet" href="css/css.css"/>
+
+  </head>
+  <body>
+      <!-- Fixed Navigation Bar at The Top -->
+        <div class="navbar navbar-fixed-top navbar-inverse">
+          <div class="container">
+            <div class="navbar-brand">
+              <a href="#"> <img class="logo" src="assets/home.ico"></a>
+            </div>
+
+            <ul class="nav navbar-nav">
+              <li class="active">
+                <a href="#"> Home </a>
+              </li>
+              <li>
+                <a href="#myCarousel"> Spots </a>
+              </li>
+            </ul>
+
+            <ul class="nav navbar-nav pull-right">
+              <li>
+                <a href="#aboutMe">
+                  <span class="glyphicon glyphicon-user icon-space"> </span>
+                  About Me 
+                </a>
+              </li>
+            </ul>
+        </div> <!-- Navigation Wrapper -->
+      </div> <!-- End of Navigation Bar -->
+      
+      <div class="intro row">
+        <button class="btn-primary center-block">My Top Four Favorite Vacation Spots in Ethiopia</button>
+      </div>
+
+      <!-- Map here -->
+      <div id="the-map" class="container"></div>
+
+      <!-- Load Map With This JavaScript Code  -->
+      <script>
+         var map = L.map('the-map').setView([9.00, 39.00], 6);
+         L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',  
+          { attribution: 'Map data &copy; 2017 OpenStreetMap contributors',  
+            minZoom: '1',  
+            maxZoom: '18'
+          }).addTo(map);
+
+         /* Places I visited */
+         /* Lalibela */
+         var lalibelaMarker = L.marker(
+          [12.0337, 39.0438], {title: 'Rock-Hewn Churches, Lalibela' }
+          ).bindPopup('<a target="_blank" href="http://whc.unesco.org/en/list/18"> Lalibela </a>').addTo(map); 
+
+         /* Lake Tana */ 
+         var lakeTanaMarker = L.marker(
+          [12.0266, 37.3035], {title: 'The Largest Lake in Ethiopia, Lake Tana' }
+          ).bindPopup('<a target="_blank" href="https://en.wikipedia.org/wiki/Lake_Tana"> Lake Tana </a> ').addTo(map); 
+
+         /* Blue Nile Falls */
+         var blueNileMarker = L.marker(
+          [11.485576089729, 37.589786052704], {title: 'Blue Nile Falls, Locally Known as "Tis Abay"'}
+          ).bindPopup('<a target="_blank" href="https://en.wikipedia.org/wiki/Blue_Nile_Falls"> Blue Nile Falls </a>').addTo(map); 
+
+         /* Simien Mountains */
+         var simienMountainsMarker = L.marker(
+          [13.3064, 38.2641], {title: 'Simien Mountains'}
+          ).bindPopup('<a target="_blank" href="https://www.simienmountainsnationalpark.org"/> Simien Mountains </a>').addTo(map); 
+
+      </script>
+
+
+      <div class="edge-to-edge">
+        <!-- Description of Spots -->
+        <div class="carousel slide" id="myCarousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li class="active" data-slide-to="0" data-target="#myCarousel"></li>
+            <li data-slide-to="1" data-target="#myCarousel"></li>
+            <li data-slide-to="2" data-target="#myCarousel"></li>
+            <li data-slide-to="3" data-target="#myCarousel"></li>
+          </ol> <!-- End of Indicators -->
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+              <div class="item active" id="slide1">
+                <div class="carousel-caption">
+                  <h4> Blue Nile Falls, Locally Known as "Tis Abay" </h4>
+                </div>
+              </div>
+
+              <div class="item" id="slide2">
+                <div class="carousel-caption">
+                  <h4> Rock-Hewn Churches, Lalibela </h4>
+                </div>
+              </div>
+
+              <div class="item" id="slide3">
+                <div class="carousel-caption">
+                  <h4>The Largest Lake in Ethiopia, Lake Tana</h4>
+                </div>
+              </div>
+
+              <div class="item" id="slide4">
+                <div class="carousel-caption">
+                  <h4> Simien Mountains </h4>
+                </div>
+              </div>
+          </div> <!--Carousel Inner End --> 
+
+          <!-- Controls -->
+          <a class="left carousel-control" data-slide="prev" href="#myCarousel">
+            <span class="icon-prev"></span>
+          </a>
+          <a class="right carousel-control" data-slide="next" href="#myCarousel">
+            <span class="icon-next"></span>
+          </a>
+        </div> <!-- End of Carousel --> 
+
+      </div>
+      
+      <div id="aboutMe" class="row">
+        <img class="col-md-8" src="images/myPhoto.jpg">
+        <blockquote class="col-md-4">
+          <p>The past summer was just epic! I spent the whole break doing activites I love: Sleeping, Eating, Coding and Traveling. The pinned spots are my top 4 favorites, of all places I vistied. </p>
+          <footer> <cite title="Daniel Shiferaw"> Daniel Shiferaw</cite> </footer>
+        </blockquote>
+      </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"> </script>
+  </body>
+</html>

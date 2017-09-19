@@ -1,0 +1,115 @@
+
+body {
+	background: #7E8F7C;
+	background-size: cover;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	width: 100%:;
+}
+
+.navbrand {
+	size: 28px;
+	color: blue;
+	font-family: sans-serif;
+	font-
+}
+
+.logo {
+	height: 50px;
+	width: 50px;
+}
+
+.icon-space {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.intro {
+	height: 50px;
+	width: calc(100% - 200px);
+	color: black;
+	margin-top: 80px;
+	margin-left: 20px;
+	margin-bottom: 20px;
+	align: center;
+}
+
+#the-map {
+	height: 600px;
+	width: calc(100% - 200px);
+	margin-bottom: 40px;
+	position: relative;
+	overflow: hidden;
+	align-self: center;
+
+}
+
+.btn-primary {
+	height: 40px;
+	color: black;
+	font-size: 24px;
+	font-style: italic;
+	font-family: cursive;
+}
+
+#aboutMe {
+	height: 100%;
+	width: 100%;
+	margin-top: 2px;
+}
+
+.myPhoto {
+	height: 800px;
+	width:  70%;
+	float: left;
+	margin-right: 5px;
+}
+
+blockquote {
+	font-family: sans-serif;
+	font-size: 18px;
+	text-align: justify;
+	color: white;
+	margin-top: 15%;
+}
+
+.edge-to-edge {
+	margin: 0;
+	padding: 0;
+}
+
+blockquote > footer {
+	color: black;
+	font-size: 26px;
+	text-align: right;
+}
+
+/** Carousel Styles **/
+
+#myCarousel .item { height: 800px; position: relative; }
+
+.carousel-caption > h4 {
+	font-size: 32px;
+	font-family: sans-serif;
+	font-style: bold;
+}
+#slide1 {
+	background: url('../images/BlueNileFalls.jpg') center no-repeat; 
+	background-size: cover;
+}
+
+#slide2 {
+	background: url('../images/Lalibela.jpg') center no-repeat;
+	background-size: cover;
+}
+
+#slide3 {
+	background: url('../images/LakeTana.jpg') center no-repeat;
+	backgroud-size: cover;
+}
+
+#slide4 {
+	background: url('../images/SimienMountains.jpg') center no-repeat;
+	background-size: cover;
+}

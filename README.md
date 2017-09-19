@@ -1,0 +1,2 @@
+
+Using leaflet JS and Bootstrap 3, I made a simple website that shows the location of my top four vacation spots in Ethiopia. I plan to continue working on this website and post all pictures from my adventures here. 
